@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    header {
+        position: absolute;
+        top: 0px;
+
+        width: 100%;
+        background: white;
+        z-index: 100;
+    }nav{
+         float: left;
+         width: 100%;
+         height: 70px;
+         /*background: pink;*/
+         display: flex;
+         /*justify-content: center;*/
+         align-items: center;
+         border-bottom: 1px solid darkgray;
+
+     }
+    nav img{
+        margin-left: 100px;
+    }
+    #mid{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 600px;
+        background: url("images/login1.png")  ;
+    }
+    #login{
+        position: relative;
+        top: 30px;
+        left: 60%;
+        width: 400px;
+        height: 400px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #login ul{
+        width: 96%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        /*background: pink;*/
+
+
+    }
+    #login ul li{
+        width: 20%;
+        height: 100%;
+        list-style: none;
+        float: left;
+        background: black;
+    }
+    #login ul li:nth-child(1){
+        background: url("images/login2.png") no-repeat 5px;
+    }
+    #login ul li:nth-child(2){
+        background: url("images/login3.png") no-repeat 5px;
+    }
+    #login ul li:nth-child(3){
+        background: url("images/login4.png") no-repeat 5px;
+    }
+    #login ul li:nth-child(4){
+        background: url("images/login5.png") no-repeat 5px;
+    }
+    #loginbottom{
+        position: relative;
+        border-top:1px solid gray;
+        width: 85%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #loginbottom button{
+        outline: none;
+        border:none;
+        width: 50%;
+        height: 50%;
+        color: white;
+        font-size: 16px;
+        font-weight: 200;
+        border-radius: 50px;
+        background-color: #1429a0;
+    }
+    #loginbottom button a{
+        color: white;
+        text-decoration: none;
+    }
+    #wen{
+        position: absolute;
+        top: 60%;
+        width: 32%;
+        text-align: center;
+        height: 30px;
+        font-size: 17px;
+        line-height: 30px;
+        background-color: white;
+    }
+    #pp{
+        position: relative;
+        top: 230px;
+        left: 150px;
+        font-size: 60px;
+        font-weight: 600;
+        color: white;
+    }
+    #ppp{
+        position: relative;
+        top: 250px;
+        left: 230px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+</style>
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img src="images/logo%20(1).png" width="150" height="30"></a>
+    </nav>
+</header>
+<div id="mid">
+    <p id="pp">欢迎登录三星网上商城</p>
+    <p id="ppp">登录三星账号购机可获得三星积分及优惠券领取使用</p>
+    <div id="login">
+        <h1>请选择登陆方式</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="loginbottom">
+            <button> <a href="index4.html"><p>立即注册</p></a></button>
+        </div>
+        <div id="wen">还没有三星账号</div>
+    </div>
+</div>
+</body>
+</html>

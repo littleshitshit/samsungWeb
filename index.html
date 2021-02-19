@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body><!-- 1 -->
+<header><!--100-->
+           <ul id="navUl">
+               <img src="images/logo.png" width="85">
+               <li onmouseover="hide()">Galaxy 5G</li>
+               <li onmouseover="show()">手机/平板</li>
+               <li onmouseover="show()">电视/影音</li>
+               <li onmouseover="show()">家电/智家</li>
+               <li onmouseover="show()">电脑/办公/存储</li>
+               <li onmouseover="show()">explore</li>
+               <li onmouseover="show()"><a href="index2.html" >网上商城</a></li>
+               <li onmouseover="show()">售后服务</li>
+               <li onmouseover="hide()">商用解决方案</li>
+               <img  onclick="search()" src="images/search.png" width="30">
+           </ul>
+        <div id="navList" onmouseleave="hide()"></div><!-- -1 ->10 -->
+</header>
+<div id="slideshow" >
+    <div class="same"><img src="images/1440x640-pc-w21-1118.webp" ></div>
+    <div class="same"><video width="100%" height="100%" loop autoplay muted><source src="video/1.webm" type="video/webm"></video></div>
+    <div class="same"><video  width="100%" height="100%" loop autoplay muted><source src="video/2.webm" type="video/webm"></video></div>
+</div>
+<button id=""></button>
+<!--//轮播条-->
+<div id="animate1"></div>
+<div id="animate2"></div>
+<div id="animate3"></div>
+
+<div id="Animate4" class="samm"></div>
+<div id="Animate5" class="samm"></div>
+<div id="Animate6" class="samm"></div>
+<!--阴影-->
+<div id="shadow" ><!-- -1 ->9 -->
+    <p id="shap" onclick="search()">×</p>
+    <h1 id="shah1">我们能帮忙找点什么吗?</h1>
+    <div id="search" onclick="stretch()">
+        <img  src="images/search.png" width="40">
+        <input type="text" autofocus="autofocus">
+    </div>
+    <div id="inputcopy">
+        <h3>建议搜索</h3>
+    </div>
+</div>
+<!--手机轮播-->
+<div id="phoneslide">
+    <h1>移动产品</h1>
+    <ul id="ulUp">
+        <li class="liA"><a>Galaxy Z Flip 5G</a><span class="s0"></span></li>
+        <li class="liA"><a>Galaxy S20 FE 5G</a><span class="s0"></span></li>
+        <li class="liA"><a>Galaxy Z Fold2 5G</a><span class="s0"></span></li>
+        <li class="liA"><a>Galaxy Note20 | 20 Ultra 5G</a><span class="s0"></span></li>
+        <li class="liA"><a>三星W21 5G 新品发布会回顾</a><span class="s0"></span></li>
+    </ul>
+    <div id="imgShow">
+        <div class="imgs"><img src="images/phone0.png"> </div>
+        <div class="imgs"><img src="images/phone1.png"> </div>
+        <div class="imgs"><img src="images/phone2.png"> </div>
+        <div class="imgs"><img src="images/phone3.png"> </div>
+        <div class="imgs"><img src="images/phone4.png" > </div>
+    </div>
+    <div id="fontShow">
+        <div class="fonts"><h1>Galaxy Z Flip 5G</h1>           <p>限时立省700元</p><button>立刻抢购</button></div>
+        <div class="fonts"><h1>Galaxy S20 FE 5G</h1>           <p>24期免息 至高2000元换新补贴</p><button>立刻抢购</button></div>
+        <div class="fonts"><h1>Galaxy Z Fold2 5G</h1>          <p>限时领券立省500元 赠Samaung Galaxy Buds Live</p><button>立刻抢购</button></div>
+        <div class="fonts"><h1>Galaxy Note20 | 20 Ultra 5G</h1><p>24期免息 赠Samsung Galaxy Watch3 蓝牙 41mm</p><button>立刻抢购</button></div>
+        <div class="fonts"><h1>三星W21 5G 新品发布会回顾</h1>     <button>观看视频</button></div>
+    </div>
+</div>
+<footer>
+    <button onclick="dance1()">你要跳舞吗？</button>
+    <div id="dance">
+        <audio id="play"><source src="video/music.mp3" type="audio/mp3"></audio><img src="images/timg.gif"><img src="images/timg.gif"><img src="images/timg.gif"><img src="images/timg.gif"><img src="images/timg.gif"><img src="images/timg.gif"><img src="images/timg.gif"><img src="images/timg.gif"></div>
+</footer>
+<script>
+
+    dance1=()=>{
+        document.getElementById("play").play();
+        setTimeout(()=>{
+            document.getElementById("dance").style.display = "block";
+        },600)
+
+    }
+    for(let i=0;i<document.getElementsByClassName('liA').length;i++) {
+        document.getElementsByClassName('liA')[i].addEventListener('click', () => {
+            for(let i=0;i<document.getElementsByClassName('liA').length;i++){
+                document.getElementsByClassName('s0')[i].style.width="0%";
+            }//初始化
+
+            document.getElementsByClassName('s0')[i].style.width="100%";
+            document.getElementById("imgShow").style.left=-i*100+"%";
+            document.getElementById("fontShow").style.left=-i*100+"%";
+
+
+        })
+    }
+    var j=0;
+    var w=document.body.offsetWidth;
+    window.onload=()=>{
+
+        document.getElementById("shadow").style.height=window.screen.availHeight+"px";
+    }
+    function show(){
+        document.getElementById("navList").style.height="600px";
+        document.getElementById("navList").style.zIndex="10";
+        document.getElementById("shadow").style.opacity="0.8";
+        document.getElementById("shadow").style.zIndex="9";
+
+    }
+    function hide(){
+        var a=document.getElementById("navList");
+        a.style.height="0px";
+        document.getElementById("shadow").style.opacity="0";
+        document.getElementById("navList").style.zIndex="-1";
+        document.getElementById("shadow").style.zIndex="-1";
+    }
+    search=()=>{
+        if(document.getElementById("shadow").style.zIndex==-1){
+            document.getElementById("shadow").style.zIndex="1000";
+            document.getElementById("shadow").style.opacity="0.92";
+            document.getElementById("shap").style.opacity="1";
+            document.getElementById("shah1").style.opacity="1";
+            document.getElementById("search").style.opacity="1";
+        }else{
+            document.getElementById("shadow").style.zIndex="-1";
+            document.getElementById("shadow").style.opacity="0";
+            document.getElementById("shap").style.opacity="0";
+            document.getElementById("shah1").style.opacity="0";
+            document.getElementById("search").style.opacity="0";
+        }
+
+    }
+    stretch=()=>{
+        if(document.getElementById("inputcopy").style.borderRadius=="26px"){
+            document.getElementById("inputcopy").style.height="50px";
+            document.getElementById("inputcopy").style.borderRadius="40px";
+        }else{
+            document.getElementById("inputcopy").style.height="300px";
+            document.getElementById("inputcopy").style.borderRadius="26px";
+
+        }
+
+    }
+     clearslide=()=>{
+        for(var i=0;i<document.getElementsByClassName("same").length;i++){
+            document.getElementsByClassName("same")[i].style.zIndex="-1";
+            document.getElementsByClassName("same")[i].style.opacity="0";
+            document.getElementsByClassName("samm")[i].style.width="0px";
+        }
+    }
+    setTimeout(()=>{
+        clearslide();
+        document.getElementsByClassName("same")[j].style.zIndex="1";
+        document.getElementsByClassName("same")[j].style.opacity="1";
+        document.getElementsByClassName("samm")[j].style.width="130px";
+        j++;
+    },0)
+    setInterval(()=>{
+
+        if(j==3){
+            j=0;
+            clearslide();
+            document.getElementsByClassName("same")[j].style.zIndex="1";
+            document.getElementsByClassName("same")[j].style.opacity="1";
+            document.getElementsByClassName("samm")[j].style.width="130px";
+            j++;
+        }else if(j<3){
+            clearslide();
+            document.getElementsByClassName("same")[j].style.zIndex="1";
+            document.getElementsByClassName("same")[j].style.opacity="1";
+            document.getElementsByClassName("samm")[j].style.width="130px";
+            j++;
+        }
+    },6000)
+    var now=0;//记录当前index
+    var before=0;//记录上一个index
+    phonemove0=()=>{
+        before=now;
+        now=0;
+        phonem();
+        console.log(now+","+before);
+    }
+    phonemove1=()=>{
+        before=now;
+        now=1;
+        phonem();
+        console.log(now+","+before);
+
+    }
+    phonemove2=()=>{
+        before=now;
+        now=2;
+        phonem();
+        console.log(now+","+before);
+
+    }
+    phonemove3=()=>{
+        before=now;
+        now=3;
+        phonem();
+        console.log(now+","+before);
+
+    }
+    phonemove4=()=>{
+        before=now;
+        now=4;
+        phonem();
+        console.log(now+","+before);
+
+    }
+    var img0=true;
+    var img1=false;
+    var img2=false;
+    var img3=false;
+    var img4=false;
+
+    phonem=()=>{
+
+            if (now == 0) {
+                if (img0 == true) {
+                    document.getElementsByClassName("phonein")[now].style.left = "0%"
+                    img0 = false;
+                } else {
+                    document.getElementsByClassName("phonein")[now].style.left = "100%"
+                    img0 = true;
+                }
+        }
+
+            if (now == 4) {
+                if (img4 == true) {
+                    document.getElementsByClassName("phoneon")[now].style.left = "0%";
+                    img4 = false;
+                } else {
+                    document.getElementsByClassName("phoneon")[now].style.left = "-100%";
+                    img4 = true;
+                }
+
+        }
+
+    }
+        // if(now>before){
+        //     // console.log("1")
+        //     document.getElementsByClassName("phonein")[before].style.left="-200%";//放在左边
+        //     document.getElementsByClassName("phonein")[now].style.left="-100%";//屏幕
+        //
+        // }
+        // if(now<before){
+        //     console.log("2")
+        //     document.getElementsByClassName("phonein")[before].style.left="100%";
+        //     document.getElementsByClassName("phonein")[now].style.left="-100%";//屏幕
+        //
+        // }
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

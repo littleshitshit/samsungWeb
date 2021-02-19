@@ -1,0 +1,367 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    z-index: 1;
+}
+header{
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    background: white;
+}
+#navUl {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+#navUl li:nth-child(6){
+    margin-right: 17%;
+}
+#navUl img:nth-child(11){
+    float: left;
+    margin-left: 40px;
+}
+#navUl li{
+    float: left;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 8px;
+}
+#navUl li:hover{
+    background: black;
+    cursor: pointer;
+    color: white;
+}
+#navUl img:nth-child(1){
+    float:left;
+    margin-left: 30px;
+    margin-right: 60px;
+}
+#navList{
+    width: 100%;
+    height: 0px;
+    transition: all .5s;
+    background: white;
+}
+#shadow{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background: black;
+    opacity: 0;
+    transition: all .4s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#shadow p{
+    position: absolute;
+    right: 33px;
+    color: white;
+    opacity: 0;
+    font-size: 70px;
+    font-weight: lighter;
+}
+#shadow h1{
+    opacity: 0;
+    margin-top:100px;
+}
+#search{
+    position: absolute;
+    top: 200px;
+    opacity: 0;
+    width: 600px;
+    height: 50px;
+    border-radius: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+#inputcopy{
+    position: absolute;
+    top: 200px;
+    width: 600px;
+    height: 50px;
+    border-radius: 40px;
+    background: white;
+    z-index: 1000;
+
+}
+#inputcopy h3{
+    float: left;
+    color: black;
+    font-size: 17px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+#search img{
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+#shadow input{
+    float: left;
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    height: 85%;
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+#slideshow{
+    width: 100%;
+    height: 632px;
+    position: absolute;
+    top: 80px;
+    overflow: hidden;
+}
+
+#slideshow div{
+    transition: all .4s;
+}
+#slideshow div:nth-child(1){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#slideshow div:nth-child(2){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+#slideshow div:nth-child(3){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+div[id^=animate]{
+    position: absolute;
+    top: 70%;
+    width: 130px;
+    height: 4px;
+    background: black;
+    opacity: 0.4;
+    z-index: 5;
+
+}
+
+#animate1{
+    left: 34%;
+}
+#animate2{
+    left: 44%;
+}
+#animate3 {
+    left: 54%;
+}
+div[id^=Animate]{
+    position: absolute;
+    top: 70%;
+    width: 0px;
+    height: 4px;
+    background: white;
+    transition: all 6s linear;
+    z-index: 5;
+}
+
+#Animate4{
+    left: 34%;
+}
+#Animate5{
+
+    left: 44%;
+}
+#Animate6{
+
+    left: 54%;
+}
+
+
+
+#phoneslide{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 800px;
+    /*background: pink;*/
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    overflow: hidden;
+
+}
+#phoneslide h1{
+    width: 100%;
+    height: 10%;
+    /*margin-top:-10%;*/
+    /*background: red;*/
+    display: flex;
+    justify-content: center;
+}
+#ulUp{
+    position: absolute;
+    top: 80px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+#ulUp li{
+    float: left;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+#ulUp li a{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#ulUp li span{
+    width: 0%;
+    display: block;
+    height: 2px;
+    background: black;
+    transition: all .4s;
+
+}
+#imgShow{
+    position:absolute;
+    top: 100px;
+    width: 500%;
+    left: 0%;
+    height: 500px;
+    /*background: red;*/
+    display: flex;
+    justify-content:center;
+    transition: all .8s;
+
+}
+#imgShow div{
+    float: left;
+    margin-top: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+#fontShow{
+    position:absolute;
+    top: 600px;
+    width: 500%;
+    left: 0%;
+    height: 500px;
+    /*background: red;*/
+    display: flex;
+    justify-content:center;
+    transition: all 1s;
+
+}
+#fontShow div{
+    float: left;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+}
+#fontShow div h1{
+    width: 100%;
+    height: 40px;
+    /*background: red;*/
+}
+#fontShow div p{
+    position: absolute;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+}
+#fontShow div a{
+    text-decoration: black;
+    position: absolute;
+    top: 80px;
+    width: 50%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+#fontShow div button{
+    position: absolute;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    top: 90px;
+    width: 100px;
+    height: 40px;cursor: pointer;
+}
+
+footer{
+    position: absolute;
+    top: 1800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer button{
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    display: flex;
+    box-shadow: 1px 5px 5px gray;
+    outline: none;
+    justify-content: center;
+    background: brown;
+    cursor: pointer;
+}
+#dance{
+    position: absolute;
+    z-index: 100000;
+    top: -900px;
+    width: 100%;
+    height: 500px;
+    display: none;
+}
+
+
+
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #f0f0f0;
+    }
+    header {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        background: white;
+        z-index: 100;
+    }
+    nav{
+        float: left;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid darkgray;
+
+    }
+    nav a{
+        margin-left: 100px;
+    }
+    nav p{
+        margin-left: 20px;
+    }
+    #box{
+        position: absolute;
+        top: 130px;
+        left: 29%;
+        margin:auto;
+        border-radius: 30px;
+        width: 42%;
+        border:1px solid #c9c9c9;
+        height: 800px;
+        background-color: white;
+
+
+    }
+    #box h1{
+        float: left;
+        color: #0072de;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        margin-top: 5%;
+    }
+
+    .che{
+        float: left;
+        margin-top: 3%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 5px;
+
+    }
+    .che input{
+        float: left;
+        margin-left: 10%;
+        width: 20px;
+        height: 20px;
+        outline: none;
+        border: none;
+        border-radius: 100%;
+    }
+    .che p{
+        font-size: 18px;
+        font-weight: 500;
+        width: 80%;
+        float: left;
+        margin-left: 1%;
+    }
+    .che a{
+        font-size: 18px;
+        color: black;
+        float: left;
+        font-weight: 700;
+
+        margin-left: 14%;
+    }
+    #bar{
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2%;
+        height: 10%;
+        border-top: 1px solid #c9c9c9;
+        display: flex;
+        align-items: center;
+    }
+    #bar input{
+        float: left;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 100%;
+    }
+    #bar p{
+        font-size: 18px;
+        font-weight: 500;
+        width: 80%;
+        float: left;
+        margin-left: 1%;
+    }
+    button{
+        width: 35%;
+        margin-left: 32.5%;margin-top: 4%;
+        height: 44px;
+        background-color: #0072de;
+
+        font-weight: bold;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 22px;
+        border: none;
+        outline: none;
+
+    }
+    button a{
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img src="images/logo%20(1).png" width="150" height="30"></a>
+        <p>账户</p>
+    </nav>
+</header>
+<div id="box">
+    <h1>创建您的三星帐户</h1>
+    <div class="che"> <input type="checkbox"  class="check" name="check"><p>条款和条件</p>
+        <a href="#">详细信息</a></div>
+
+    <div class="che"><input type="checkbox"  class="check" name="check"><p>特殊条款</p>
+        <a href="#">详细信息</a></div>
+    <div class="che"><input type="checkbox" class="check" name="check"><p>三星隐私权政策</p>
+        <a href="#">详细信息</a></div>
+    <div class="che"> <input type="checkbox" class="check" name="check"><p>个人敏感信息收集使用说明(核心功能）</p>
+        <a href="#">详细信息</a></div>
+    <div class="che">
+        <input type="checkbox"  class="check" name="check"><p>其他特殊情形</p>
+        <a href="#">详细信息</a></div>
+
+
+
+    <div id="bar">
+        <input type="checkbox" name="check"><p>我已阅读并同意以上所有服务条款</p>
+    </div>
+    <button><a href="index5.html">同意</a> </button>
+</div>
+<script>
+    var p=true;
+    document.getElementById("bar").addEventListener("click",()=>{
+        if(p==true){
+            for(let i=0;i<document.getElementsByClassName("check").length;i++) {
+                document.getElementsByClassName("check")[i].checked = true;
+            }
+            p=false;
+            console.log(p);
+            }else if(p==false){
+            for(let i=0;i<document.getElementsByClassName("check").length;i++) {
+                document.getElementsByClassName("check")[i].checked = false;
+            }
+            p=true;
+            console.log(p);
+
+        }
+    })
+</script>
+</body>
+</html>
